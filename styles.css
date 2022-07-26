@@ -5,10 +5,16 @@ body{
     width: 100vw;
     margin-top: 0px;
     margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.body > * {
+  flex-grow: 1;
 }
 
 .company{
-    font-weight: bolder;
+    font-size: 48px;
+    font-weight: 900
 }
 
 .header{
@@ -16,23 +22,31 @@ body{
     justify-content: space-between;
     background-color: #1f2937;
     color: aliceblue;
-    height: 60px;
+/*     height: 60px; */
     align-items: center;
-    padding-left: 30px;
+    padding:0 30px;
     list-style-type:none;
-    
-    
+    flex-wrap: wrap;
     }
 .navlist {
     display: flex;
     list-style-type: none;
-    gap: 10px;
+    gap: 25px;
     padding-right: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    color: aliceblue;
+    flex-wrap: wrap;
 }
 a:link{
     text-decoration: none;
     color: aliceblue;
 }
+
+a:visited{
+  color: aliceblue;
+}
+
 
 .desc{
     padding-left: 50px ;
@@ -40,52 +54,70 @@ a:link{
 }
 .main{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #1f2937;
     color: aliceblue;
-    padding-left: 10px;
+    gap: 20px;
+  flex-wrap: wrap;
 }
 img{
     width: 500px;
     height: auto;
     margin: 10px;
+    border-radius:12px
 }
+
+
 
 .info{
     display: flex;
     flex-direction: column;
     padding-left: 10px;
     
+    
 }
 
 h3{
     text-align: center;
-}
-
-.quote>p{
-    font-style: italic;
-    text-align: center;
+/*   border: 2px solid black; */
 }
 
 .cards{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 10px;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .cards>*{
     outline: auto;
     width: 200px;
     height: 200px;
-    flex-basis: 20%;
-    /* flex-grow: 1; */
-    flex-wrap: wrap;
+/*     flex-basis: 25%; */
+    flex-shrink: 0;
+   
 }
 
 .quote{
     background-color: #e5e7eb;
-    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+/*     border: 2px solid black; */
+    
+}
+
+.quote>p{
+    font-style: italic;
+    text-align: center;
+/*   border: 2px solid black; */
+  margin: 1px auto;
+  
+}
+
+.quote > p.commentor{
+  margin-left: 70%
 }
 
 .action{
@@ -93,14 +125,19 @@ h3{
     padding-left: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 30px 200px;
-    padding: 10px;
+    justify-content: center;
+    margin: 20px 200px;
+    padding: 20px;
+    gap: 1rem;
+    flex-wrap:wrap;
+    border-radius: 12px
 
 }
 
 button{
     background-color: #3882f6;
+    padding: 10px 20px;
+    border-radius: 12px
 }
 
 .footer{
